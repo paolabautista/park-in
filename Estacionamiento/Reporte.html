@@ -1,0 +1,116 @@
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio no-localstorage no-sessionstorage webworkers applicationcache svg inlinesvg no-smil svgclippaths" lang="en">
+<head>
+	<meta class="foundation-mq-small">
+	<meta class="foundation-mq-small-only">
+	<meta class="foundation-mq-medium">
+	<meta class="foundation-mq-medium-only">
+	<meta class="foundation-mq-large">
+	<meta class="foundation-mq-large-only">
+	<meta class="foundation-mq-xlarge">
+	<meta class="foundation-mq-xlarge-only">
+	<meta class="foundation-mq-xxlarge">
+	<meta class="foundation-data-attribute-namespace">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reporte</title>
+	<link href="CSS/foundation.css" rel="stylesheet">
+	<link href="CSS/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<script src="js/vendor/modernizr.js"></script>
+	<meta class="foundation-mq-topbar">
+</head>
+<body>
+
+<div style="height: 100%;">
+	<div class="fixed">
+		<nav class="top-bar" data-topbar role="navigation">
+			
+			<section class="top-bar-section">
+				<div class="row">
+					<ul class="title-area" style="width: 5%; margin-left: 0%; float: left;">
+						<li class="name align-middle" >
+							<h1>
+								<a href="ReportesUsr.html">
+									<span>
+										<i class="fas fa-arrow-left fa-md white i-menu" accesskey="ReportesUsr.html"></i>
+									</span>
+								</a>
+							</h1>
+						</li>
+					</ul>
+					<div class="columns small-12 medium-12 large-12 text-center" style=" width: 40%; margin-left:25%;margin-right: 30%; " >
+						<h2>Reporte</h2>
+					</div>
+				</div>
+			</section>
+		</nav>
+	</div>
+	<form>
+			
+  			<fieldset class="columns medium-6 large-6 medium-centerd large-centered">
+   				<legend>Información del reporte</legend>
+   				<div class="columns small-12 medium-12 large-6 medium-centered large-centered ">
+   					<fieldset>	
+   						<legend>Foto de reporte</legend>
+   							<div class="amatras">		
+   									<img src="img/repo.jpg" style="width: 60%; height: 100px; margin-bottom: 20px; margin-left: 20%;margin-top: 0px;">
+   							</div>
+   					</fieldset>
+   				</div>
+   				<div class="columns small-12 medium-12 medium-centered large-6 medium-centerd large-centered">
+	   				<fieldset>	
+	   					<legend>Datos</legend>
+		   						
+			    		<label>Usuario:
+			      			<input class="in12" type="text" placeholder="Nombre Usuario" id="nombreRep">
+			    		</label>
+			    		<label>Estacionamiento:
+			      			<input class="in12" type="text" placeholder="Estacionamiento" id="est">
+			    		</label>
+			    		<label>Descripción:	
+			    			<textarea placeholder="Explique los motivos del reporte"></textarea>
+			   			</label>
+			   			<label>Calificación:	
+			   			</label>
+
+			   			<form id="estars">
+						  <p class="clasificacion">
+						       <input id="radio1" type="radio" name="estrellas" value="5"><!--
+						    --><label class="star" for="radio1">★</label><!--
+						   --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+ 						   --><label class="star" for="radio2">★</label><!--
+						    --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+						    --><label class="star" for="radio3">★</label><!--
+						    --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+						    --><label class="star" for="radio4">★</label><!--
+						    --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+ 						   --><label class="star" for="radio5">★</label>
+ 						 </p>
+
+						</form>
+			   			<label>Fecha: <input type="date" name="fecha-repo">			   			
+			   			</label>
+	    			</fieldset>
+	    			<div class="row">
+							<div class="columns small-12" style="display: flex;">
+								<input class="button round" type="submit" value="Enviar" onclick="enviar()" style="margin: auto; margin-bottom: 1.25rem;">
+
+							</div>
+    			</div>
+  			</fieldset>
+		</form>
+</div>
+<script>
+	function enviar() {
+		// body...
+		alert('Reporte enviado');
+	}
+</script>
+<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio no-localstorage no-sessionstorage webworkers applicationcache svg inlinesvg no-smil svgclippaths" lang="en">
+<head>
+	<meta class="foundation-mq-small">
+	<meta class="foundation-mq-small-only">
+	<meta class="foundation-mq-medium">
+	<meta class="foundation-mq-medium-only">
+	<meta class="foundation-mq-large">
+	<meta class="foundation-mq-large-only">
+	<meta class="foundation-mq-xlarge">
+	<meta class="foundation-mq-xlarge-only">
+	<meta class="foundation-mq-xxlarge">
+	<meta class="foundation-data-attribute-namespace">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TIEMPO</title>
+	<link href="CSS/foundation.css" rel="stylesheet">
+	<link href="CSS/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<script src="js/vendor/modernizr.js"></script>
+	<meta class="foundation-mq-topbar">
+	<!-- Compiled and minified CSS -->
+    
+</head>
+<body> 
+
+	<div style="height: 100%;">
+		<div class="fixed">
+			<nav class="top-bar" data-topbar role="navigation">
+				<ul class="title-area">
+					<li class="name align-middle">
+						<h1>
+							<a href="">
+								<span>
+									<i class="fas fa-arrow-left fa-md white i-menu"></i>
+								</span>
+							</a>
+						</h1>
+					</li>
+				</ul>
+				<section class="top-bar-section">
+					<div class="row">
+						<div class="columns small-12 medium-6 large-6 large-centered text-center" >
+							<h2>TIEMPO</h2>
+							<p>Este es tu código QR de entrada, en el momento que se escaneado empezará a contar tu tiempo <br> Recuerda que el tiempo de tolerancia es propuesto por el dueño.</p>
+							<br>
+							<br>
+						</div>
+					</div>
+				</section>
+			</nav>
+						<div class="row" style="padding-top: 6rem;">
+				<div class="small-12 medium-12 large-12 columns end">
+					<form action="" method="POST">
+						<div class="row">
+							<div class="columns small-12 medium-6 medium-centered large-4 large-centered">
+								<img src="img/qr.png" id="img-qr">
+							</div>
+						</div>
+						<div class="row">
+							<p id="p-tiempo-entrada">TIMEPO PARA ENTRAR (10 min)</p>
+							<h2 id='CuentaAtras'></h2>
+						</div>
+
+						<br>
+						<div class="row">
+							<div class="columns small-12" style="display: flex;">
+								<input class="button round" type="submit" value="Cancelar reserva" style="margin: auto; margin-bottom: 1.25rem; margin-top: 0%; margin-bottom: 10px; margin-left: 43%;">				
+							</div>
+						</div>
+						</div>
+					</form>
+				</div>
+			</div>	
+
+
+
+		</div>
+	</div> 
+
+<!-- PARA HACER UN CUENTA ATRAS -->
+<script language="JavaScript">
+
+    /* Determinamos el tiempo total en segundos */
+    var totalTiempo=600;
+    /* Determinamos la url donde redireccionar */
+    
+ 
+    function updateReloj()
+    {
+        document.getElementById('CuentaAtras').innerHTML = totalTiempo;
+ 
+        if(totalTiempo==0)
+        {
+            alert('Tu tiempo se ha agotado');
+        }else{
+            /* Restamos un segundo al tiempo restante */
+            totalTiempo-=1;
+            /* Ejecutamos nuevamente la función al pasar 1000 milisegundos (1 segundo) */
+            setTimeout("updateReloj()",1000);
+        }
+    }
+ 
+    window.onload=updateReloj;
+ 
+ </script>
+ 
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+
+
+</body>
+</html>
+
+
+
+
+

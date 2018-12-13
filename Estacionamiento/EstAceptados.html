@@ -1,0 +1,97 @@
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio no-localstorage no-sessionstorage webworkers applicationcache svg inlinesvg no-smil svgclippaths" lang="en">
+<head>
+	<meta class="foundation-mq-small">
+	<meta class="foundation-mq-small-only">
+	<meta class="foundation-mq-medium">
+	<meta class="foundation-mq-medium-only">
+	<meta class="foundation-mq-large">
+	<meta class="foundation-mq-large-only">
+	<meta class="foundation-mq-xlarge">
+	<meta class="foundation-mq-xlarge-only">
+	<meta class="foundation-mq-xxlarge">
+	<meta class="foundation-data-attribute-namespace">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Estacionamientos Aceptados</title>
+	<link href="CSS/foundation.css" rel="stylesheet">
+	<link href="CSS/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<script src="js/vendor/modernizr.js"></script>
+	<meta class="foundation-mq-topbar">
+</head>
+<body>
+
+<div style="height: 100%;">
+	<div class="fixed">
+		<nav class="top-bar" data-topbar role="navigation">
+			
+			<section class="top-bar-section">
+				<div class="row">
+					<ul class="title-area" style="width: 5%; margin-left: 0%; float: left;">
+						<li class="name align-middle" >
+							<h1>
+								<a href="InicioGestor.html">
+									<span>
+										<i class="fas fa-arrow-left fa-md white i-menu" accesskey="InicioGestor.html"></i>
+									</span>
+								</a>
+							</h1>
+						</li>
+					</ul>
+					<div class="columns small-12 medium-12 large-12 text-center" style=" width: 40%; margin-left:25%;margin-right: 30%; " >
+						<h2>Aceptados</h2>
+					</div>
+				</div>
+			</section>
+		</nav>
+			<div>
+				<table id="tabla" cellspacing="" cellpadding="10">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Nombre </th>
+							<th>Dueño </th>
+							<th>Opciones</th>
+							
+						</tr>
+					</thead>
+					
+					<tbody>
+
+						<?php
+						session_Start();
+						include 'PHP/conexion.php';
+						$mysql="SELECT * 
+						FROM estacionamiento
+						WHERE TipoE like '1';
+						$result=mysqli_query($conexion,$mysql);
+					
+						while ($mostrar=mysqli_fetch_array($result)) {
+							?>
+							<tr>
+								<td><?php echo $mostrar['idEstacionamiento'] ?></td>
+								<td><?php echo $mostrar['NomEst'] ?></td>
+								<td><?php echo $mostrar['idUsuario']?></td>
+								
+								<td>
+									<div id="aceptS" class="boton"><a href="InfoEstacionamiento.html">Ver Info</a></div>
+									<div id="erraS" class="boton"><a href="#">Eliminar</a></div></td>
+	
+							</tr>
+							<?php
+						}
+						?>
+					</tbody>
+				</table>
+			</div>
+	</div>
+</div>
+
+<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+
+</body>
+</html>

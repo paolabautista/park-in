@@ -1,0 +1,88 @@
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio no-localstorage no-sessionstorage webworkers applicationcache svg inlinesvg no-smil svgclippaths" lang="en">
+<head>
+	<meta class="foundation-mq-small">
+	<meta class="foundation-mq-small-only">
+	<meta class="foundation-mq-medium">
+	<meta class="foundation-mq-medium-only">
+	<meta class="foundation-mq-large">
+	<meta class="foundation-mq-large-only">
+	<meta class="foundation-mq-xlarge">
+	<meta class="foundation-mq-xlarge-only">
+	<meta class="foundation-mq-xxlarge">
+	<meta class="foundation-data-attribute-namespace">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link href="CSS/foundation.css" rel="stylesheet">
+	<link href="CSS/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<script src="js/vendor/modernizr.js"></script>
+	<meta class="foundation-mq-topbar">
+</head>
+<body>
+
+	<div style="height: 100vh;">
+		<div class="padding-general">
+			<div class="row">
+				<div class="small-12 medium-6 large-3 medium-centered large-centered columns end">
+					<div class="row">
+						<div class="small-12 medium-6 large-12 medium-centered large-centered columns end" >
+							<img src="img/PARK-IN.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="padding-top: 2.5rem;">
+				<div class="small-12 medium-12 large-12 columns end">
+					<form action="PHP/validar.php" method="POST">
+						<div class="row">
+							<div class="columns small-12 medium-6 medium-centered large-4 large-centered">
+								<input type="text" name="email" placeholder="Correo">
+							</div>
+						</div>
+						<div class="row">
+							<div class="columns small-12 medium-6 medium-centered large-4 large-centered">
+								<input type="password" name="contrasena" placeholder="Contraseña">
+							</div>
+						</div>
+						<div class="row">
+							<div class="columns small-12 text-center">
+								<div class="">
+									<a href="">
+										<p class="line" style="display: inline-block; color: blue;">Recuperar mi contraseña</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<br><br>							
+						<div class="row">
+							<div class="columns small-12" style="display: flex;">
+								<input class="button round" type="submit" value="Iniciar Sesión" style="margin: auto; margin-bottom: 3.50rem;">
+							</div>
+						</div>
+						<div class="row">
+							<div class="columns small-12 text-center">
+								<div class="">
+									<a href="registro.html">
+										<p class="line" style="display: inline-block;">Registrar</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+
+
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta class="foundation-mq-small">
+	<meta class="foundation-mq-small-only">
+	<meta class="foundation-mq-medium">
+	<meta class="foundation-mq-medium-only">
+	<meta class="foundation-mq-large">
+	<meta class="foundation-mq-large-only">
+	<meta class="foundation-mq-xlarge">
+	<meta class="foundation-mq-xlarge-only">
+	<meta class="foundation-mq-xxlarge">
+	<meta class="foundation-data-attribute-namespace">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Buscar Estacionamiento</title>
+	<link href="CSS/foundation.css" rel="stylesheet">
+	<link href="CSS/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<script src="js/vendor/modernizr.js"></script>
+	<meta class="foundation-mq-topbar"> 
+	
+</head>
+<body>
+<!-- <button onclick="getLocation()" id="boton1">Permitir acceso a mi ubicación</button> -->
+<div class="columns small-12 medium-12 large-12 " style="display: flex;">
+							<button class="button round" type="submit" style="width: 60%; margin-left:20%;margin-right: 20%; margin-top: 6%;" onclick="getLocation()">Permitir acceso a mi ubicación</button>
+						</div>
+
+<p id="mapholder"></p>
+<div class="barra">
+	<div class="div-opcion">
+		<a href="inicio.html" class="p-option">INICIO</a><br><img src="img/home.png" class= "img-option">
+	</div>
+	<div class="div-opcion">
+		<a href="registroAuto.html" class="p-option">CARROS</a><br><img src="img/carro.png" class= "img-option"">
+	</div>
+	<div class="div-opcion">
+		<a href="tiempo.html" class="p-option">TIEMPO</a><br><img src="img/time.png" class= "img-option">
+	</div>
+	<div class="div-opcion">
+		<a href="opciones.html" class="p-option">OPCIÓN</a><br><img src="img/option.png" class= "img-option"n">
+	</div>
+
+</div>
+
+ <script>
+// var x = document.getElementById("demo");
+// function getLocation() {
+//   if (navigator.geolocation) {
+//     navigator.geolocation.watchPosition(showPosition);
+//   } else {
+//     x.innerHTML = "Geolocation is not supported by this browser.";
+//   }
+// }
+// function showPosition(position) {
+//   x.innerHTML = "Latitude: " + position.coords.latitude + 
+//   "<br>Longitude: " + position.coords.longitude; 
+
+//   var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+//   var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_:KEY";
+
+//   document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+// }
+
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+  var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyBSz5E_QVK2ORvZVFWQQsNi1t6jBaRDRQg";
+
+  document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+</script>
+</script>
+</body>
+</html>
